@@ -13,7 +13,7 @@ public enum AvailableSite {
     @XmlEnumValue(value = "MangaHere")
     MANGA_HERE("MangaHere", "http://www.mangahere.com/mangalist/", 0, new MangaHereParser()),
     @XmlEnumValue(value = "MangaFox")
-    MANGA_FOX("MangaFox", "http://www.mangafox.me/directory/", 1, new MangaFoxParser());
+    MANGA_FOX("MangaFox", "http://www.mangafox.me/manga/", 1, new MangaFoxParser());
     private String name;
     private Parser parser;
     private String url;
