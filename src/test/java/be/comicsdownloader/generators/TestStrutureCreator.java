@@ -13,7 +13,7 @@ import java.util.Properties;
 
 public class TestStrutureCreator {
 
-    private static final String ROOT_PATH_TO_DUMMY_DATA = "src/test/resources/images/";
+    private static final String ROOT_PATH_TO_DUMMY_DATA = "src/test/resources/be/comicsdownloader/model/";
 
     public static Date createDate() {
         try {
@@ -76,7 +76,7 @@ public class TestStrutureCreator {
             image.setMustBeSaved(true);
             image.setName("Image1");
             image.setNumber(1);
-            image.setUrl(new File(ROOT_PATH_TO_DUMMY_DATA + "image.jpg").toURI().toURL().toString());
+            image.setUrl(new File(ROOT_PATH_TO_DUMMY_DATA + "images/image.jpg").toURI().toURL().toString());
             image.setValidityDate(createDate());
 
             chapter.addImage(image);

@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class PropertyDAOImplTest {
 
-    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/properties/";
+    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/be/comicsdownloader/model/persistance/properties/";
     private PropertyDAOImpl dao;
     private File originalSourceFile;
     private File insertFile;
@@ -34,17 +34,13 @@ public class PropertyDAOImplTest {
     }
 
     @Before
-    public void setUp() {
-        try {
-            PropertiesService.setInstance(File.createTempFile("DummySettings", ".properties"));
-            Services.getPropertyService().setProperty(PropertiesService.PropertyKey.AUTO_REFRESH, false);
-            sourceFile = File.createTempFile("Properties", ".properties");
-            FileUtils.copyFile(originalSourceFile, sourceFile);
-            dao = new PropertyDAOImpl(sourceFile);
-            properties = TestStrutureCreator.createProperties();
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
-        }
+    public void setUp() throws IOException {
+        PropertiesService.setInstance(File.createTempFile("DummySettings", ".properties"));
+        Services.getPropertyService().setProperty(PropertiesService.PropertyKey.AUTO_REFRESH, false);
+        sourceFile = File.createTempFile("Properties", ".properties");
+        FileUtils.copyFile(originalSourceFile, sourceFile);
+        dao = new PropertyDAOImpl(sourceFile);
+        properties = TestStrutureCreator.createProperties();
     }
 
     @After

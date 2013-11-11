@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 public class XmlWebsiteDAOTest {
 
-    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/xml/";
+    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/be/comicsdownloader/model/persistance/xml/";
     private XmlWebsiteDAO dao;
     private Website website;
     private Date dummyDate;

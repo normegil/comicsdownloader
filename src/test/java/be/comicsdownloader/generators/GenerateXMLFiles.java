@@ -12,7 +12,7 @@ import java.io.File;
 
 public class GenerateXMLFiles {
 
-    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/xml/";
+    private static final String PATH_TO_RESOURCES_FOLDER = "src/test/resources/be/comicsdownloader/model/persistance/xml/";
 
     public static void main(String args[]) {
         try {

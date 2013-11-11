@@ -12,15 +12,16 @@ import static org.junit.Assert.*;
 
 public class NetLoaderTest {
 
+    private static final String PATH_TO_RESOURCES = "src/test/resources/be/comicsdownloader/model/";
     private NetLoader loader;
     private File sourceFile;
     private File imageFile;
     private File nullFile;
 
     public NetLoaderTest() {
-        sourceFile = new File("src/test/resources/xml/EmptyCollectionReference.xml");
-        imageFile = new File("src/test/resources/images/image.jpg");
-        nullFile = new File("src/test/resources/FakeFile.xml");
+        sourceFile = new File(PATH_TO_RESOURCES + "persistance/xml/EmptyCollectionReference.xml");
+        imageFile = new File(PATH_TO_RESOURCES + "images/image.jpg");
+        nullFile = new File(PATH_TO_RESOURCES + "FakeFile.xml");
 
         loader = new NetLoader();
     }

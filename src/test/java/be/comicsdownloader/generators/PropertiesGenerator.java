@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class PropertiesGenerator {
 
-    private static final String PATH_TO_TEST_RESOURCES_FOLDER = "src/test/resources/properties/";
+    private static final String PATH_TO_TEST_RESOURCES_FOLDER = "src/test/resources/be/comicsdownloader/model/persistance/properties/";
 
     public static void main(String args[]) {
         try {

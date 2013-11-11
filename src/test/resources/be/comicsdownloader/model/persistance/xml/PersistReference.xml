@@ -18,11 +18,12 @@
                             <chapters>
 <chapter>
     <url>http://FakeWebsite0/FakeDummySerie/Tome</url>
+    <validityDate>2013-07-13</validityDate>
     <number>1.0</number>
     <name>chapter</name>
     <images>
         <image number="1">
-            <url>file:/home/normegil/Sources/Java/comicsdownloader/src/test/ressources/images/image.jpg</url>
+            <url>file:/home/normegil/Sources/Java/comicsdownloader/src/test/resources/be/comicsdownloader/model/images/image.jpg</url>
             <validityDate>2013-07-13</validityDate>
             <name>Image1</name>
         </image>
@@ -58,11 +59,12 @@
                             <chapters>
 <chapter>
     <url>http://FakeWebsite1/FakeDummySerie/Tome</url>
+    <validityDate>2013-07-13</validityDate>
     <number>1.0</number>
     <name>chapter</name>
     <images>
         <image number="1">
-            <url>file:/home/normegil/Sources/Java/comicsdownloader/src/test/ressources/images/image.jpg</url>
+            <url>file:/home/normegil/Sources/Java/comicsdownloader/src/test/resources/be/comicsdownloader/model/images/image.jpg</url>
             <validityDate>2013-07-13</validityDate>
             <name>Image1</name>
         </image>

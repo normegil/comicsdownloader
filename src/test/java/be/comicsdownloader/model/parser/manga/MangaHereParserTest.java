@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 public class MangaHereParserTest {
 
-    private static final String PATH_TO_RESOURCES = "src/test/resources/html/manga/mangahere/";
+    private static final String PATH_TO_RESOURCES = "src/test/resources/be/comicsdownloader/model/parser/mangahere/";
     private String mangaHereMangaListPageSnapshot;
     private String mangaHereTomeListPageSnapshot;
     private String mangaHereImagePageSnapshot;
