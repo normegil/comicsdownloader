@@ -4,7 +4,7 @@ Small web crawler destined to ease the download of your manga from different kno
 
 ## Basic Usage
 
-To download applications, replicate the git repository and build it with maven. Under linux :
+To download the application, replicate the git repository and build it with maven. Under linux :
 
 > git clone git@github.com:Normegil/comicdownloader.git
 > cd comicdownloader
