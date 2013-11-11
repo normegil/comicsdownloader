@@ -1,0 +1,10 @@
+/main.log
+target/
+data.xml
+nbactions.xml
+library/
+.idea/
+*.iml
+.project
+.classpath
+.settings/

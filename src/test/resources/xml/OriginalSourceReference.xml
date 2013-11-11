@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Websites>
+    <websites>
+        <website>
+            <url>http://FakeWebsite0/</url>
+            <validityDate>2013-07-13</validityDate>
+            <name>Website0</name>
+            <Series>
+                <serie>
+                    <url>http://FakeWebsite0/FakeDummySerie</url>
+                    <validityDate>2013-07-13</validityDate>
+                    <name>DummySerie</name>
+                    <tomes>
+                        <tome number="0.0">
+                            <url>http://FakeWebsite0/FakeDummySerie/Tome</url>
+                            <validityDate>2013-07-13</validityDate>
+                            <name>DummyTome</name>
+                            <chapters>
+<chapter>
+    <url>http://FakeWebsite0/FakeDummySerie/Tome</url>
+    <number>1.0</number>
+    <name>chapter</name>
+    <images>
+        <image number="1">
+            <url>file:/home/normegil/Sources/Java/comicsdownloader/src/test/ressources/images/image.jpg</url>
+            <validityDate>2013-07-13</validityDate>
+            <name>Image1</name>
+        </image>
+    </images>
+</chapter>
+                            </chapters>
+                        </tome>
+                    </tomes>
+                </serie>
+                <serie>
+                    <url>http://FakeWebsite0/FakeDummySerie1</url>
+                    <validityDate>2013-07-13</validityDate>
+                    <name>DummySerie1</name>
+                    <tomes/>
+                </serie>
+            </Series>
+            <availableSite>MangaHere</availableSite>
+        </website>
+    </websites>
+</Websites>
