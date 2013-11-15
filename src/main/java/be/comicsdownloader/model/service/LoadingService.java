@@ -3,10 +3,7 @@ package be.comicsdownloader.model.service;
 import be.comicsdownloader.model.AvailableSite;
 import be.comicsdownloader.model.CrashException;
 import be.comicsdownloader.model.persistance.XmlWebsiteDAO;
-import be.comicsdownloader.model.pojo.manga.Chapter;
-import be.comicsdownloader.model.pojo.manga.Serie;
-import be.comicsdownloader.model.pojo.manga.Tome;
-import be.comicsdownloader.model.pojo.manga.Website;
+import be.comicsdownloader.model.pojo.manga.*;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -185,5 +182,17 @@ public final class LoadingService {
         } else {
             return new TreeSet<>();
         }
+    }
+
+    public Collection<Chapter> getChapters(final Collection<Image> images) {
+        Set<Chapter> chapters = new HashSet<>();
+        if (images != null) {
+            for (Image image : images) {
+                if (!chapters.contains(image.getChapter())) {
+                    chapters.add(image.getChapter());
+                }
+            }
+        }
+        return chapters;
     }
 }

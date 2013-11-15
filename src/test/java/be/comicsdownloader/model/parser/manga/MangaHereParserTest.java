@@ -122,7 +122,7 @@ public class MangaHereParserTest {
     public void testParseChaptersWithNullSource() {
         try {
             final Tome Tome = website.getSeries().iterator().next().iterator().next();
-            List<Chapter> chapters = parser.parse(ParsingPart.CHAPTERS, null, Tome);
+            parser.parse(ParsingPart.CHAPTERS, null, Tome);
             fail("Parsing a null string should throw an IllegalArgumentException");
         } catch (IllegalArgumentException ex) {
         }

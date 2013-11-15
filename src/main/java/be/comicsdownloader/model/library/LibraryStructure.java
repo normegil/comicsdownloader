@@ -2,7 +2,8 @@ package be.comicsdownloader.model.library;
 
 public enum LibraryStructure {
 
-    FULL_SPLITTED("FullSplitted", "<Serie>/Tome #/Chapter #/", new FullSplittedFolderLibraryStructureManager());
+    FULL_SPLITTED("FullSplitted", "<Serie>/Tome #/Chapter #/", new FullSplittedFolderLibraryStructureManager()),
+    TOME_AND_CHAPTER_FUSED("TomeAndChapterFused", "<Serie>/Tome # - Chapter #/", new TomeAndChapterFusedLibraryStructureManager());
     private String representation;
     private LibraryStructureManager manager;
 
