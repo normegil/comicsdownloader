@@ -1,13 +1,8 @@
 package be.comicsdownloader.model.library;
 
-import be.comicsdownloader.model.CrashException;
+import be.comicsdownloader.helpers.FormatHelper;
 import be.comicsdownloader.model.pojo.manga.Chapter;
-import be.comicsdownloader.model.pojo.manga.Image;
-import be.comicsdownloader.model.service.Services;
 import org.apache.log4j.Logger;
-
-import java.io.File;
-import java.util.Collection;
 
 public class FullSplittedFolderLibraryStructureManager extends AbstractLibraryStructureManager {
 
@@ -22,9 +17,9 @@ public class FullSplittedFolderLibraryStructureManager extends AbstractLibrarySt
                     .append("/")
                     .append(chapter.getTome().getSerie().getName())
                     .append("/Tome ")
-                    .append(chapter.getTome().getNumber())
+                    .append(FormatHelper.getOutputFloat(chapter.getTome().getNumber()))
                     .append("/Chapter ")
-                    .append(chapter.getNumber())
+                    .append(FormatHelper.getOutputFloat(chapter.getNumber()))
                     .append("/");
             path = builder.toString();
         }

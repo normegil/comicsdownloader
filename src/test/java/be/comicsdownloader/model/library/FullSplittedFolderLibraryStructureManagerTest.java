@@ -1,6 +1,7 @@
 package be.comicsdownloader.model.library;
 
 import be.comicsdownloader.generators.TestStrutureCreator;
+import be.comicsdownloader.helpers.FormatHelper;
 import be.comicsdownloader.model.AvailableSite;
 import be.comicsdownloader.model.pojo.manga.*;
 import be.comicsdownloader.model.service.PropertiesService;
@@ -30,9 +31,9 @@ public class FullSplittedFolderLibraryStructureManagerTest extends AbstractLibra
                 .append("/")
                 .append(chapter.getTome().getSerie().getName())
                 .append("/Tome ")
-                .append(chapter.getTome().getNumber())
+                .append(FormatHelper.getOutputFloat(chapter.getTome().getNumber()))
                 .append("/Chapter ")
-                .append(chapter.getNumber())
+                .append(FormatHelper.getOutputFloat(chapter.getNumber()))
                 .append("/");
 
         return builder.toString();
