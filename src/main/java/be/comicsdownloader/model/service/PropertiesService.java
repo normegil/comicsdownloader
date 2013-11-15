@@ -107,7 +107,7 @@ public final class PropertiesService extends Observable {
         AUTO_REFRESH("autorefresh.enable", "true"),
         VALIDITY_PERIOD("autorefresh.period", "7"),
         DOWNLOAD_THREAD_NUMBER("download.nbThread", "4"),
-        LIBRARY_FOLDER_STRUCTURE("library.structure", LibraryStructure.FULL_SPLITTED.toString()),
+        LIBRARY_FOLDER_STRUCTURE("library.structure", LibraryStructure.FULL_SPLITTED.getName()),
         LIBRARY_FOLDER("library.folder", "library/"),
         DATA_FILE("data.file", "data.xml"),
         IMAGE_FORMAT_TYPE("image.format.type", "PNG");

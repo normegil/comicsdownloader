@@ -23,7 +23,7 @@ public final class LibraryService extends Observable {
 
     private LibraryService() {
         currentRootFolder = new File(PropertiesService.getInstance().getProperty(PropertyKey.LIBRARY_FOLDER));
-        currentStructure = LibraryStructure.valueOf(PropertiesService.getInstance().getProperty(PropertyKey.LIBRARY_FOLDER_STRUCTURE));
+        currentStructure = LibraryStructure.getEnum(PropertiesService.getInstance().getProperty(PropertyKey.LIBRARY_FOLDER_STRUCTURE));
     }
 
     public void archiveCurrentLibrary() {
