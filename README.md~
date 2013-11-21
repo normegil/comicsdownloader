@@ -7,9 +7,7 @@ Small web crawler destined to ease the download of your manga from different kno
 To download the application, replicate the git repository and build it with maven. Under linux :
 
 > git clone git@github.com:Normegil/comicdownloader.git
-
 > cd comicdownloader
-
 > mvn install
 
 The executable Jar file can be found in the **target** directory. Move it to your prefered location
