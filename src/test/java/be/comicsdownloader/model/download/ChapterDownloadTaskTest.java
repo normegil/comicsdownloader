@@ -6,6 +6,7 @@ import be.comicsdownloader.model.pojo.manga.*;
 import be.comicsdownloader.model.service.PropertiesService;
 import be.comicsdownloader.model.service.Services;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.StringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -66,9 +67,12 @@ public class ChapterDownloadTaskTest {
             File chapterFolder = new File(Services.getLibraryService().getPathForChapter(chapter));
             for (Image image : chapter) {
                 boolean found = false;
+                int imageNumber = image.getNumber();
+                String imageName = StringUtils.substringAfter(String.valueOf(imageNumber + 1000), "1");
+
                 for (File imageFile : chapterFolder.listFiles()) {
                     if (imageFile.getName().equals(
-                            String.valueOf(image.getNumber()) + "."
+                            imageName + "."
                                     + Image.ImageType.valueOf(Services.getPropertyService().getProperty(PropertiesService.PropertyKey.IMAGE_FORMAT_TYPE)).getTypeName())) {
                         found = true;
                         break;
@@ -76,7 +80,7 @@ public class ChapterDownloadTaskTest {
                 }
 
                 if (!found) {
-                    fail("Image not found : " + image.getNumber());
+                    fail("Image not found : " + imageNumber);
                 }
             }
         }

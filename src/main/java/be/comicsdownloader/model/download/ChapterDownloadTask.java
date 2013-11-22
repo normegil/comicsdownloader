@@ -9,6 +9,7 @@ import be.comicsdownloader.model.pojo.manga.Image;
 import be.comicsdownloader.model.pojo.manga.Image.ImageType;
 import be.comicsdownloader.model.service.PropertiesService.PropertyKey;
 import be.comicsdownloader.model.service.Services;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
 import javax.imageio.ImageIO;
@@ -44,11 +45,16 @@ public class ChapterDownloadTask implements Runnable {
                     throw new CrashException("Folder cannot be created [Path=" + chapterFolder.getAbsolutePath() + "]");
                 }
             }
+
             for (Image image : chapter) {
                 try {
                     BufferedImage loadedImage = loader.loadImage(new URL(image.getUrl()));
 
-                    File newImage = new File(chapterFolder, image.getNumber() + "." + type.getTypeName());
+                    // Add missing 0 before image number
+                    int imageNumber = image.getNumber();
+                    String imageName = StringUtils.substringAfter(String.valueOf(imageNumber + 1000), "1");
+
+                    File newImage = new File(chapterFolder, imageName + "." + type.getTypeName());
                     if (!newImage.exists()) {
                         boolean createNewFileSuccess = newImage.createNewFile();
                         if (!createNewFileSuccess) {
