@@ -37,7 +37,7 @@ public class SerieListModel extends AbstractListModel<Serie> {
         LOG.trace("Filter list model (Filter=" + filter + ")");
         filteredSeries.clear();
         for (Serie serie : series) {
-            if (serie.getName().contains(filter)) {
+            if (serie.getName().toLowerCase().contains(filter.toLowerCase())) {
                 filteredSeries.add(serie);
             }
         }
